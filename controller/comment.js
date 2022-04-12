@@ -93,7 +93,7 @@ const comments = async (req, res) => {
     service: 'gmail',
     auth: {
       user: 'renaris97@gmail.com',
-      pass: 'babehlo123',
+      pass: 'baBehlo123?',
     },
     tls: {
       rejectUnauthorized: false,
