@@ -128,7 +128,8 @@ const register = async (req, res) => {
   };
 
   const token = jwt.sign(payload, secret, { expiresIn: '15m' });
-  const link = `http://localhost:3000/v1/verifikasi/${user.id}/${token}`;
+  // const link = `http://localhost:3000/v1/verifikasi/${user.id}/${token}`;
+  const link = `https://v1-sosmed.herokuapp.com/v1/verifikasi/${user.id}/${token}`;
 
   const mailOptions = {
     from: 'Sosmed <renaris97@gmail.com>',
