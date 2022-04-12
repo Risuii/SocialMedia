@@ -54,7 +54,9 @@ const likes = async (req, res) => {
     },
   });
 
-  user = await Postings.findOne({});
+  user = await Postings.findOne({
+      where: { user_id: req.params.id }
+  });
 
   const mailOptions = {
     from: 'Sosmed <renaris97@gmail.com>',
