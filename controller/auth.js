@@ -120,7 +120,7 @@ const register = async (req, res) => {
     },
   });
 
-  const JWT_SECRET = 'rahasia';
+  const JWT_SECRET = process.env.SECRET_KEY;
 
   const secret = JWT_SECRET;
   const payload = {
