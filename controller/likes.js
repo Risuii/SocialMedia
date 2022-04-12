@@ -54,11 +54,13 @@ const likes = async (req, res) => {
     },
   });
 
+  user = await Postings.findOne({});
+
   const mailOptions = {
     from: 'Sosmed <renaris97@gmail.com>',
     to: user.email,
     subject: 'Notifikasi',
-    text: `${req.user.username} telah memberikan like di postinganmu`,
+    text: `${req.user.username} telah memberikan like di postinganmu ${user.username}`,
   };
 
   transporter.sendMail(mailOptions, (error) => {
