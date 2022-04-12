@@ -1,0 +1,378 @@
+{
+	"info": {
+		"_postman_id": "6ca02056-daff-429e-9e40-37cc43eea6cd",
+		"name": "Sosmed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RegisterUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"\",\n    \"password\": \"\",\n    \"email\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base3000}}/v1/auth/register",
+					"host": [
+						"{{base3000}}"
+					],
+					"path": [
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"\",\n    \"password\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base3000}}/v1/auth/login",
+					"host": [
+						"{{base3000}}"
+					],
+					"path": [
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Posting",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"description": "Masukan JWT"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"postingan\": \"ini postingan pertamaku\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base3000}}/v1/posting",
+					"host": [
+						"{{base3000}}"
+					],
+					"path": [
+						"v1",
+						"posting"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EnablePosting",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"description": "Masukan JWT"
+					}
+				],
+				"url": {
+					"raw": "{{base3000}}/v1/enable/posting/:id",
+					"host": [
+						"{{base3000}}"
+					],
+					"path": [
+						"v1",
+						"enable",
+						"posting",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null,
+							"description": "Masukan ID Postingan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAkun",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"description": "Masukan JWT"
+					}
+				],
+				"url": {
+					"raw": "{{base3000}}/v1/getAkun",
+					"host": [
+						"{{base3000}}"
+					],
+					"path": [
+						"v1",
+						"getAkun"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPostingan",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"description": "Masukan JWT"
+					}
+				],
+				"url": {
+					"raw": "{{base3000}}/v1/get/posting/:id",
+					"host": [
+						"{{base3000}}"
+					],
+					"path": [
+						"v1",
+						"get",
+						"posting",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null,
+							"description": "Masukan ID Postingan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditPostingan",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"description": "Masukan JWT"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"postingan\": \"postingan ini akan dihapus\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base3000}}/v1/posting/edit/:id",
+					"host": [
+						"{{base3000}}"
+					],
+					"path": [
+						"v1",
+						"posting",
+						"edit",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null,
+							"description": "Masukan ID Postingan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePostingan",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"description": "Masukan JWT"
+					}
+				],
+				"url": {
+					"raw": "{{base3000}}/v1/posting/delete/:id",
+					"host": [
+						"{{base3000}}"
+					],
+					"path": [
+						"v1",
+						"posting",
+						"delete",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null,
+							"description": "Masukan ID Postingan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DisableComment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"description": "Masukan JWT"
+					}
+				],
+				"url": {
+					"raw": "{{base3000}}/v1/disable/posting/:id",
+					"host": [
+						"{{base3000}}"
+					],
+					"path": [
+						"v1",
+						"disable",
+						"posting",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null,
+							"description": "Masukan ID Postingan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateComment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"description": "Masukan JWT"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"comment\": \"test comment\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base3000}}/v1/comment/:id",
+					"host": [
+						"{{base3000}}"
+					],
+					"path": [
+						"v1",
+						"comment",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null,
+							"description": "Masukan ID Postingan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Likes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"description": "Masukan JWT"
+					}
+				],
+				"url": {
+					"raw": "{{base3000}}/v1/likes/:id",
+					"host": [
+						"{{base3000}}"
+					],
+					"path": [
+						"v1",
+						"likes",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null,
+							"description": "Masukan ID Postingan"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
