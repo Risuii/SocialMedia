@@ -54,15 +54,11 @@ const likes = async (req, res) => {
     },
   });
 
-  user = await Postings.findOne({
-      where: { user_id: req.params.id }
-  });
-
-  const data = await Postings.findOne({})
+  user = await Postings.findOne({});
 
   const mailOptions = {
     from: 'Sosmed <renaris97@gmail.com>',
-    to: data.email,
+    to: user.email,
     subject: 'Notifikasi',
     text: `${req.user.username} telah memberikan like di postinganmu ${user.username}`,
   };
