@@ -35,7 +35,9 @@ Pakai postman untuk menjalankan program
 
 *   Import collection Postman yang ada di folder Postman
 
-*   Rubah {{base3000}} menjadi localhost:3000 
+*   Rubah {{base3000}} menjadi localhost:3000 jika ingin menjalankan secara local
+
+*   Rubah {{base3000}} menjadi https://v1-sosmed.herokuapp.com jika ingin menjalankan secara online
 
 *   Dalam endpoint Register, dalam body silahkan diisi data - data yang di butuhkan
 seperti username,password,dan email
