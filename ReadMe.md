@@ -29,6 +29,11 @@ npm start
 ```
 Pakai postman untuk menjalankan program
 ```
+5.  NB
+```
+Disarankan menjalankan program secara lokal, dikarenakan masih banyak bug/error di heroku
+```
+
 ## Fungsional
 
 *   Jalankan program menggunakan Postman
