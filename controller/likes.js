@@ -47,14 +47,14 @@ const likes = async (req, res) => {
     service: 'gmail',
     auth: {
       user: 'renaris97@gmail.com',
-      pass: 'baBehlo123?',
+      pass: 'baBehlo1234?',
     },
     tls: {
       rejectUnauthorized: false,
     },
   });
 
-  user = await Postings.findOne({});
+  // user = await Postings.findOne({});
 
   const mailOptions = {
     from: 'Sosmed <renaris97@gmail.com>',
@@ -81,7 +81,7 @@ const likes = async (req, res) => {
       service: 'gmail',
       auth: {
         user: 'renaris97@gmail.com',
-        pass: 'babehlo123',
+        pass: 'baBehlo1234?',
       },
       tls: {
         rejectUnauthorized: false,

@@ -2,7 +2,7 @@
   "development": {
     "username": "postgres",
     "password": "babehlo123",
-    "database": "sosmed",
+    "database": "wlb",
     "host": "localhost",
     "dialect": "postgres"
   }

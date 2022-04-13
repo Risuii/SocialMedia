@@ -113,7 +113,7 @@ const register = async (req, res) => {
     service: 'gmail',
     auth: {
       user: 'renaris97@gmail.com',
-      pass: 'baBehlo123?',
+      pass: 'baBehlo1234?',
     },
     tls: {
       rejectUnauthorized: false,
@@ -216,7 +216,7 @@ const login = async (req, res) => {
       status: 'error',
       message: 'Error ketika check password di login',
     };
-    return res.status(400).json(result).json(err);
+    return res.status(400).json(result);
   }
   if (user.status === 'disable') {
     const result = {
